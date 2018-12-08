@@ -3,6 +3,7 @@ Author: João Paulo Andrade
 Email: joaopauloap@gmail.com
 Script for get range allocated ipv4/ipv6 from lacnic
 '''
+
 from ftplib import FTP
 
 class GetTarget:
