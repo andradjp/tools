@@ -1,11 +1,12 @@
 import requests
 from requests.auth import HTTPBasicAuth
 from ipaddress import IPv4Network
+from scan.lib import GetTarget
 
 class ScanHTTPBasic:
 
     def __init__(self):
-        pass
+        g = GetTarget()
 
     def search_target(self, range):
         self.range = range
@@ -30,6 +31,3 @@ class ScanHTTPBasic:
                 continue
             except Exception:
                 continue
-    # for x in range(5):
-    #     threading.Thread(target=search_target('192.168.0.0/24')).start()
-# search_target('192.168.0.0/24')
