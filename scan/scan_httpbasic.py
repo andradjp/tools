@@ -1,20 +1,17 @@
 import requests
 from requests.auth import HTTPBasicAuth
 from ipaddress import IPv4Network
-from scan.lib import GetTarget
 
+class ScanHTTPBasic(object):
 
-class ScanHTTPBasic:
-
-    def __init__(self):
-        g = GetTarget()
+    def __init__(self, target_range):
+        self.target_range = target_range
 
     # noinspection PyBroadException
-    @staticmethod
-    def search_target(target_range):
+    def search_target(self):
         user = ['root', 'admin']
         password = ['root', 'admin', '123456', '123']
-        for ip in IPv4Network(target_range):
+        for ip in IPv4Network(self.target_range):
             print(ip)
             try:
                 response = requests.get('http://' + str(ip), timeout=5.0)
