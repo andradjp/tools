@@ -22,6 +22,7 @@ class GetTarget(object):
         self._ftp.cwd('/pub/stats/{}/'.format(target))
         self._ftp.retrbinary('RETR delegated-{}-latest'.format(target), open('{}-latest'.format(target), 'wb').write)
         self._file = '{}-latest'.format(target)
+        self.target = target
 
     def gen_target(self):
         # Transform amount ips in mask CIDR
@@ -31,7 +32,7 @@ class GetTarget(object):
                 amount = amount / 2
                 mask += 1
             return 32 - mask
-
+        print(self._file)
         f = open(self._file, 'r')
         l_raw = f.readlines()
         l_format = [x.strip().split('|') for x in l_raw]
