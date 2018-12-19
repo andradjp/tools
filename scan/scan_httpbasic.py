@@ -36,7 +36,7 @@ class ScanHTTPBasic(object):
         for ip in IPv4Network(self.target_range):
             try:
                 print(ip)
-                response = requests.get('http://' + str(ip), timeout=5.0)
+                response = requests.get('http://' + str(ip), timeout=5.0, verify=False)
                 if str(response.headers['Server']).__contains__('Apache'):
                     f = open('apache_target.txt', 'a+')
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
@@ -48,7 +48,10 @@ class ScanHTTPBasic(object):
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
                     f.close()
                     break
-
+                else:
+                    f = open('unknow_target.txt', 'a+')
+                    f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
+                    f.close()
             except requests.exceptions.ConnectionError:
                 continue
             except requests.exceptions.ReadTimeout:
