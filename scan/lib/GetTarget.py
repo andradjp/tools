@@ -12,7 +12,7 @@ ripenic - Europa
 """
 from ftplib import FTP
 
-target = 'ripencc'
+target = 'lacnic'
 
 class GetTarget(object):
     # Download of data
