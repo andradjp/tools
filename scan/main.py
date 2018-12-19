@@ -6,5 +6,5 @@ if __name__ == "__main__":
     g.gen_target()
     f = open('ipv4_{}'.format(g.target), 'r')
     target_range = f.readlines()
-    print(target_range)
-    # s = scan_httpbasic.ScanHTTPBasic()
+    s = scan_httpbasic.ScanHTTPBasic(target_range[0].strip())
+    s.search_web_server()
