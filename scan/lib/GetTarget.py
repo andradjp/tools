@@ -11,8 +11,9 @@ ripenic - Europa
 *****************************************
 """
 from ftplib import FTP
+from scan.lib import database
 
-target = 'ripencc'
+target = 'lacnic'
 
 class GetTarget(object):
     # Download of data
@@ -23,6 +24,8 @@ class GetTarget(object):
         self._ftp.retrbinary('RETR delegated-{}-latest'.format(target), open('{}-latest'.format(target), 'wb').write)
         self._file = '{}-latest'.format(target)
         self.target = target
+        self.database = database.DataBase(target+'.db')
+        self.database.create_database()
 
     def gen_target(self):
         # Transform amount ips in mask CIDR
@@ -39,7 +42,6 @@ class GetTarget(object):
         for x in l_format:
             if x.__len__() == 7:
                 if (x[2] == 'ipv4') and (x[6] == 'allocated'):
-                    z = open('ipv4_{}'.format(target), 'a+')
-                    z.writelines('{}/{}\n'.format(x[3], get_mask(int(x[4]))))
-                    z.close()
+                    self.database.insert_data('{}/{}'.format(x[3], get_mask(int(x[4]))))
+        self.database.__delete__(self.database)
         f.close()
