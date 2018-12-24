@@ -56,5 +56,3 @@ class ScanHTTPBasic(object):
                 continue
             except Exception:
                 continue
-s = ScanHTTPBasic((1,'200.11.16.0/24'))
-s.search_web_server()
