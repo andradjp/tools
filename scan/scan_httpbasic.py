@@ -33,7 +33,7 @@ class ScanHTTPBasic(object):
 
     def search_web_server(self):
 
-        for ip in IPv4Network(self.target_range):
+        for ip in IPv4Network(self.target_range[1]):
             try:
                 print(ip)
                 response = requests.get('http://' + str(ip), timeout=5.0, verify=False)
@@ -48,10 +48,7 @@ class ScanHTTPBasic(object):
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
                     f.close()
                     break
-                else:
-                    f = open('unknow_target.txt', 'a+')
-                    f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
-                    f.close()
+
             except requests.exceptions.ConnectionError:
                 continue
             except requests.exceptions.ReadTimeout:
