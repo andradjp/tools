@@ -41,13 +41,11 @@ class ScanHTTPBasic(object):
                     f = open('apache_target.txt', 'a+')
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
                     f.close()
-                    break
 
                 elif str(response.headers['Server']).__contains__('IIS'):
                     f = open('IIS_target.txt', 'a+')
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
                     f.close()
-                    break
 
             except requests.exceptions.ConnectionError:
                 continue
