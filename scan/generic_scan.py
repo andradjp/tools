@@ -1,6 +1,9 @@
 import requests
+import urllib3
 from requests.auth import HTTPBasicAuth
 from ipaddress import IPv4Network
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class ScanHTTPBasic(object):
 
@@ -53,3 +56,5 @@ class ScanHTTPBasic(object):
                 continue
             except Exception:
                 continue
+s = ScanHTTPBasic((1,'200.11.16.0/24'))
+s.search_web_server()

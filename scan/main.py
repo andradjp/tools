@@ -1,5 +1,5 @@
 from scan.lib import GetTarget
-from scan import scan_httpbasic
+from scan import generic_scan
 from scan.lib import database
 import threading
 from time import sleep
@@ -16,7 +16,7 @@ if __name__ == "__main__":
         while d.get_data()[0]:
             target_range = d.get_data()
             d.update_data(target_range)
-            s = scan_httpbasic.ScanHTTPBasic(target_range)
+            s = generic_scan.ScanHTTPBasic(target_range)
             s.search_web_server()
 
     for i in range(5):
