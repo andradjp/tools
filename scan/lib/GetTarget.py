@@ -7,13 +7,13 @@ afrinic - Africa
 apnic - Asia
 arin - America do Norte
 lacnic - America do Sul
-ripenic - Europa
+ripencc - Europa
 *****************************************
 """
 from ftplib import FTP
 from scan.lib import database
 
-target = 'lacnic'
+target = 'arin'
 
 class GetTarget(object):
     # Download of data
