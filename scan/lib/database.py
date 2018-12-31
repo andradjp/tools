@@ -37,8 +37,14 @@ class DataBase(object):
             self.conn.commit()
         except Exception as e:
             print(e)
-
+    def close_connection(self):
+        try:
+            self.conn.close()
+            self.cursor.close()
+        except Exception as e:
+            print(e)
     def __delete__(self, instance):
+        self.conn.close()
         self.cursor.close()
         print('Instancia deletada')
 # c = DataBase('lacnic.db')

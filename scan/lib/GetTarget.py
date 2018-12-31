@@ -13,7 +13,7 @@ ripencc - Europa
 from ftplib import FTP
 from scan.lib import database
 
-target = 'arin'
+target = 'lacnic'
 
 class GetTarget(object):
     # Download of data
@@ -43,5 +43,5 @@ class GetTarget(object):
             if x.__len__() == 7:
                 if (x[2] == 'ipv4') and (x[6] == 'allocated'):
                     self.database.insert_data('{}/{}'.format(x[3], get_mask(int(x[4]))))
-        self.database.__delete__(self.database)
+        self.database.close_connection()
         f.close()

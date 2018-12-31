@@ -11,11 +11,15 @@ if __name__ == "__main__":
     threads = []
 
     def execute():
+        control = True
 
-        d = database.DataBase(g.target + '.db')
-        while d.get_data()[0]:
+        while control:
+            d = database.DataBase(g.target + '.db')
             target_range = d.get_data()
             d.update_data(target_range)
+            if target_range[2] == 'true':
+                control = False
+            d.close_connection()
             s = generic_scan.ScanHTTPBasic(target_range)
             s.search_web_server()
 
