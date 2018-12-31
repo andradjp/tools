@@ -63,6 +63,9 @@ class ScanHTTPBasic(object):
                     f.close()
 
                 elif str(response.headers['Server']).__contains__('Router'):
+                    f = open('router_target.txt', 'a+')
+                    f.write('IP: {} Router: {} \n'.format(ip, response.headers['Server']))
+                    f.close()
                     self.try_authentication(ip)
 
             except requests.exceptions.ConnectionError:
