@@ -66,7 +66,8 @@ class ScanHTTPBasic(object):
                     f = open('router_target.txt', 'a+')
                     f.write('IP: {} Router: {} \n'.format(ip, response.headers['Server']))
                     f.close()
-                    self.try_authentication(ip)
+                    if response.status_code == 401:
+                        self.try_authentication(ip)
 
             except requests.exceptions.ConnectionError:
                 continue
