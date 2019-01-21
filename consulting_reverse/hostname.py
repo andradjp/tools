@@ -12,4 +12,6 @@ def get_hostname_from_ip():
             f.writelines(str(socket.gethostbyaddr(x[1])[0]+'\n'))
         except socket.herror:
             z.writelines(x)
+    f.close()
+    z.close()
 get_hostname_from_ip()
