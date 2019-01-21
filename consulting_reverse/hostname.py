@@ -6,5 +6,10 @@ def get_hostname_from_ip():
     f.close()
     ip = [x.split() for x in ip_list]
     f = open('host_list.txt','w+')
-    for x in ip: f.writelines(str(socket.gethostbyaddr(x[1])[0]+'\n'))
+    z = open('host_unknow.txt','w+')
+    for x in ip:
+        try:
+            f.writelines(str(socket.gethostbyaddr(x[1])[0]+'\n'))
+        except socket.herror:
+            z.writelines(x)
 get_hostname_from_ip()
