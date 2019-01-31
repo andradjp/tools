@@ -13,7 +13,7 @@ moduleconfig = ["Default_Severity", "Device_Vendor", "Device_Product", "Device_V
 
 host_siem = '10.1.6.45' #ArcSight connector
 port_siem = 10515 #UDP port on connector
-token = 'hDGXd9yal8BN1RfHrhNUbZGAXFqg1HTDxy6E1WIf'
+token = ''
 
 cefmapping = {"ip-src": "src", "ip-dst": "dst", "hostname": "dhost", "domain": "dhost",
               "md5": "fileHash", "sha1": "fileHash", "sha256": "fileHash",
