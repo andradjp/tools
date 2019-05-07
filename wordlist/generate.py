@@ -1,13 +1,14 @@
-from itertools import permutations, combinations_with_replacement, accumulate
+from itertools import permutations, combinations_with_replacement, starmap
 from string import ascii_lowercase, digits
 
 keys = 9
 
 def permutation():
-    s = digits
+    s = ascii_lowercase
     data = ''
-    result = permutations(s, keys) #Nao repete os caracteres
+    # result = permutations(s, keys) #Nao repete os caracteres
     # result = combinations_with_replacement(s, 4)
+    result = combinations_with_replacement(s, 2)
     for x in result:
         print(data.join(x))
 
@@ -17,4 +18,4 @@ def default_string():
 
 
 default_string()
-# permutation()
+#permutation()
