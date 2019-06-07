@@ -1,5 +1,6 @@
 import sqlite3
 
+
 def create_database():
     conn = sqlite3.connect('loterias.db')
     cursor = conn.cursor()
@@ -7,6 +8,7 @@ def create_database():
     dezenas TEXT NOT NULL);""")
     print('Table criada com sucesso!')
     conn.close()
+
 
 def insert_data(id, dezenas):
     conn = sqlite3.connect('loterias.db')
@@ -22,12 +24,14 @@ def insert_data(id, dezenas):
         conn.commit()
         conn.close()
 
+
 def get_data():
     conn = sqlite3.connect('loterias.db')
     cursor = conn.cursor()
     cursor.execute("""SELECT * FROM megasena;""")
     return cursor.fetchall()
     conn.close()
+
 
 def info_table():
     conn = sqlite3.connect('workshop.db')

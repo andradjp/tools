@@ -1,6 +1,6 @@
-import database
+from MegaSena import database
 from random import randint
-from last_games import start
+from MegaSena.last_games import start
 
 start()
 numeros_sorteados = []
