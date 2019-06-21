@@ -1,0 +1,3 @@
+Recovery Data
+Foremost - Utilitário para recuperação de arquivos deletados
+foremost -t jpg -i /dev/sda1 -o /mnt/disco_montado
