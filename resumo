@@ -1,3 +1,10 @@
 Recovery Data
 Foremost - Utilitário para recuperação de arquivos deletados
 foremost -t jpg -i /dev/sda1 -o /mnt/disco_montado
+
+-----MAC OSX------
+diskutil - Utilitario para gerenciamento de discos na CLI
+diskutil list - lista os discos instalados no maquina
+
+dd if=imagem.iso of=/dev/rdisk2 bs=128m - E' necessario colocar a letra "r" na frente do disco para informar ao SO que
+a copia deve ser feita no modo raw.
