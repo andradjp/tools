@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e24a715c-8f6b-4e92-a04c-906d34422c40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pentest/extract_xlsx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pentest/top1000.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pentest/username.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pentest/resumo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pentest/resumo.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pentest/extract_xlsx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+            <state relative-caret-position="2055">
+              <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
               <folding>
                 <element signature="e#1656#1666#0" expanded="true" />
               </folding>
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pentest/resumo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="540">
+              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -82,9 +78,9 @@
         <option value="$PROJECT_DIR$/pentest/get_info.py" />
         <option value="$PROJECT_DIR$/pentest/scan_nmap.py" />
         <option value="$PROJECT_DIR$/pentest/scan_scapy.py" />
-        <option value="$PROJECT_DIR$/pentest/resumo.txt" />
         <option value="$PROJECT_DIR$/pentest/username.lst" />
         <option value="$PROJECT_DIR$/pentest/extract_xlsx.py" />
+        <option value="$PROJECT_DIR$/pentest/resumo.txt" />
       </list>
     </option>
   </component>
@@ -568,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562361482548</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Username Script">
+      <created>1562624510194</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1562624510194</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -580,7 +583,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.24196099" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49815497" visible="true" weight="0.33828208" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49815497" weight="0.33828208" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915073" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -606,7 +609,8 @@
     <MESSAGE value="Init Pentest" />
     <MESSAGE value="Script Scan" />
     <MESSAGE value="Scapy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scapy" />
+    <MESSAGE value="Username Script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Username Script" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Dropbox/Treinamentos/WorkShop Python/Code/produtos_cartesianos.py" />
@@ -800,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pentest/extract_xlsx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+        <state relative-caret-position="2055">
+          <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
           <folding>
             <element signature="e#1656#1666#0" expanded="true" />
           </folding>
@@ -810,8 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pentest/resumo.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="540">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
         </state>
       </provider>
     </entry>
