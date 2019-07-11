@@ -1,16 +1,16 @@
-import random
+'''
+Author: Joao Paulo Andrade Pereira
+Version: 0.2
+Data: 11.07.2019
+'''
 
-def gera_lista():
+from MegaSena import last_games
+from MegaSena import megasena
 
-    lista = []
+qt_dezenas = 6 #Quantidade de dezenas por jogo
+qt_jogos = 2 #Quantidade de jogos
 
-    for y in range(0, 7):
-        number = random.randint(1, 60)
-        if number not in lista:
-            lista.append(number)
-        else:
-            pass
-        lista.sort()
-    print(lista)
-
-gera_lista()
+if __name__ == '__main__':
+    last_games.start()
+    for x in range(qt_jogos):
+        megasena.gera_jogo_mega_sena(qt_dezenas)

@@ -17,9 +17,10 @@ def insert_data(id, dezenas):
         cursor.execute("""INSERT INTO megasena (id, dezenas)
         VALUES ('{}','{}');""".format(id, dezenas))
         return False
+
     except sqlite3.IntegrityError as e:
-        print('ID já existe!', e)
         return True
+
     finally:
         conn.commit()
         conn.close()

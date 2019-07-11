@@ -1,10 +1,10 @@
 from selenium import webdriver
 from time import sleep
 from pathlib import Path
-import database
+from MegaSena import database
 
 
-driver = webdriver.Chrome(executable_path='/usr/lib64/chromium-browser/chromedriver')
+driver = webdriver.Chrome(executable_path='./chromedriver_macos')
 driver.get('http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/')
 
 def update_database():

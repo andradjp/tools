@@ -1,8 +1,6 @@
 from MegaSena import database
 from random import randint
-from MegaSena.last_games import start
 
-start()
 numeros_sorteados = []
 
 def gera_numeros_mega_sena(size):
@@ -54,8 +52,3 @@ def gera_jogo_mega_sena(size=6):
     #     statistica_ordenada[k] = v
     #
     # print(statistica_ordenada)
-
-
-# #Mega Sena
-for x in range(2):
-    gera_jogo_mega_sena(7)
