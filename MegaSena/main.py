@@ -7,8 +7,8 @@ Data: 11.07.2019
 from MegaSena import last_games
 from MegaSena import megasena
 
-qt_dezenas = 6 #Quantidade de dezenas por jogo
-qt_jogos = 2 #Quantidade de jogos
+qt_dezenas = 7 #Quantidade de dezenas por jogo
+qt_jogos = 17 #Quantidade de jogos
 
 if __name__ == '__main__':
     last_games.start()

@@ -3,7 +3,9 @@ from random import randint
 
 numeros_sorteados = []
 
+
 def gera_numeros_mega_sena(size):
+
     global numeros_sorteados
     mega = []
     while len(mega) < size:
@@ -14,7 +16,9 @@ def gera_numeros_mega_sena(size):
     mega.sort()
     return mega
 
+
 def gera_numeros_lotofacil(size):
+
     jogo = []
     while len(jogo) < size:
         number = randint(1,25)
@@ -23,7 +27,9 @@ def gera_numeros_lotofacil(size):
     jogo.sort()
     return jogo
 
+
 def gera_jogo_mega_sena(size=6):
+
     jogo = gera_numeros_mega_sena(size)
     resposta = 'Jogo válido'
     for x in database.get_data():
