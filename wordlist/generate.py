@@ -1,31 +1,21 @@
-from itertools import permutations, combinations_with_replacement, starmap, combinations
-from string import ascii_lowercase, digits
+from itertools import product
+from string import ascii_lowercase, digits, ascii_uppercase
 
-keys = 8
 
-def permutation():
-    x = 'abcdef' + digits
-    for x1 in x:
-        for x2 in x:
-            for x3 in x:
-                for x4 in x:
-                    for x5 in x:
-                        for x6 in x:
-                            for x7 in x:
-                                for x8 in x:
-                                    print('{}{}{}{}{}{}{}{}'.format(x1,x2,x3,x4,x5,x6,x7,x8))
 
+def generate_list(words, keys):
+    for x in product(words, repeat=keys):
+        print(''.join(x))
 
 def concatenado():
-    s = 'Geovana'
+    s = 'test'
     for x in range(1000):
         print(s+str(x))
 
 
-def default_string():
+def default_string(keys):
     for x in range(10**keys):
         print(format(x, '0{}'.format(keys)))
 
-# default_string()
-permutation()
-# concatenado()
+words = digits + ascii_lowercase + ascii_uppercase
+generate_list(words, 3)
