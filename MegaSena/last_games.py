@@ -4,7 +4,7 @@ from pathlib import Path
 import database
 
 
-driver = webdriver.Chrome(executable_path='/Users/jpandrade/VSCode/tools/MegaSena/chromedriver')
+driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
 driver.get('http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/')
 
 class LastGames:

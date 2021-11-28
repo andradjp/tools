@@ -7,8 +7,8 @@ Data: 11.07.2019
 from last_games import LastGames
 from megasena import GenerateGames
 
-qt_dezenas = 8 #Quantidade de dezenas por jogo
-qt_jogos = 2 #Quantidade de jogos
+qt_dezenas = 9 #Quantidade de dezenas por jogo
+qt_jogos = 10 #Quantidade de jogos
 l = LastGames()
 m = GenerateGames()
 if __name__ == '__main__':

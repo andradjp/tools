@@ -11,8 +11,9 @@ class GenerateGames:
         mega = []
         while len(mega) < size:
             number = randint(1,60)
-            if (number not in mega) and (number not in numeros_sorteados):
-                numeros_sorteados.append(number)
+            #if (number not in mega) and (number not in numeros_sorteados):
+            if number not in mega:
+                #numeros_sorteados.append(number)
                 mega.append(number)
         mega.sort()
         return mega
