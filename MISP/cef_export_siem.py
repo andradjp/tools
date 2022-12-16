@@ -6,12 +6,12 @@ import socket
 misperrors = {'error': 'Error'}
 
 moduleinfo = {'version': '1', 'author': 'Joao Paulo Andrade',
-              'description': 'Export a module in CEF format to ArcSight SIEM',
+              'description': 'Export a module in CEF format to SIEM',
               'module-type': ['export']}
 
 moduleconfig = ["Default_Severity", "Device_Vendor", "Device_Product", "Device_Version"]
 
-host_siem = '10.1.6.45' #ArcSight connector
+host_siem = 'x.x.x.x' #SIEM connector
 port_siem = 10515 #UDP port on connector
 token = ''
 
