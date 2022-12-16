@@ -10,12 +10,12 @@ a = {"name": "cef_export", "type": "export_mod", "mispattributes": {"responseTyp
 "config": ["Default_Severity", "Device_Vendor", "Device_Product", "Device_Version"]}}
 
 def get_data():
-    headers = {'Authorization': 'eDDXfKkqW5nFyCFNHXQRRrpj2aAuuqVguqd0bvoK',
+    headers = {'Authorization': 'token_auth',
                'Accept': 'application/json',
                'Content-Type': 'application/json'}
     data = {"module":"cef_export"}
-    dados = r.get('http://misp.brb.com.br/events', headers=headers, verify=False)
-    # dados = r.post('http://10.1.16.38/shadow_attributes/index', data=j.dumps(data), headers=headers, verify=False)
+    dados = r.get('http://example.com/events', headers=headers, verify=False)
+    # dados = r.post('http://x.x.x.x/shadow_attributes/index', data=j.dumps(data), headers=headers, verify=False)
     print(dados.json())
 
 def analyze_json():
