@@ -1,6 +1,6 @@
 import socket
 
-HOST = '10.1.6.45'
+HOST = 'x.x.x.x'
 PORT = 10515
 
 def send(data):
